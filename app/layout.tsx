@@ -10,7 +10,9 @@ export default function RootLayout({
       <head />
       <body>
         <div className="flex">
+          <div className="bg-[#202123] max-w-xs h-screen overflow-y-auto">
           <SideBar/>
+          </div>
           {/* {Sidebar} */}
 
           {/* {ClientProvider - notification} */}
