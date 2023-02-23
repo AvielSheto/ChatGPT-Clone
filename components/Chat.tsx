@@ -1,7 +1,11 @@
-function Chat() {
-  return (
-    <div>Chat</div>
-  )
-}
+type Props = {
+    chatId: string;
+};
 
-export default Chat
+function Chat({chatId}: Props) {
+  return (
+    <div className="flex-1">Chat</div>
+  )
+};
+
+export default Chat;
