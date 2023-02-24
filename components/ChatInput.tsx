@@ -21,6 +21,8 @@ function ChatInput({ chatId }: Props) {
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!prompt) return;
+
     const input = prompt.trim();
     setPrompt("");
 
@@ -39,7 +41,7 @@ function ChatInput({ chatId }: Props) {
     await addDoc(
       collection(
         db,
-        "uses",
+        "users",
         session?.user?.email!,
         "chats",
         chatId,
@@ -47,7 +49,6 @@ function ChatInput({ chatId }: Props) {
       ),
       message
     );
-
 
     const notification = toast.loading('ChatGPT is thinking...')
 
@@ -64,9 +65,9 @@ function ChatInput({ chatId }: Props) {
       }),
     }).then(() => {
       // Toast notification to say successful!
-      toast.success('ChatGPT has responded!'),{
+      toast.success('ChatGPT has responded!',{
         id:notification,
-      }
+      })
     });
   };
 
