@@ -1,11 +1,11 @@
-﻿# ChatGPT - clone
-ChatGPT searcing
+# ChatGPT - clone
+ChatGPT application with the use of OpenAi API to create a chatbot, and the option to choose different OpenAi models.
 
 #### Technology stack 🧰
-- Next.Js.
+- Next.js 13.
 - React.Js
 - Typescript.
-- Firebase.
+- Firebase v9.
 - SWR.
 
 #### Dsign and mobile responsiveness 🎨📱 
