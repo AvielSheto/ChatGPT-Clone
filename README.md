@@ -1,5 +1,5 @@
 # ChatGPT - clone
-ChatGPT application with the use of OpenAi API to create a chatbot, and the option to choose different OpenAi models.
+ChatGPT application with the use of OpenAI API to create a chatbot, and the option to choose different OpenAI models.
 
 #### Technology stack 🧰
 - Next.js 13.
