@@ -23,6 +23,7 @@ ChatGPT-Clone.git`
 4. Start the development server and client: `npm start` or `yarn start`
 
 ### Live App
+Desktop only view
 https://chatgpt-avielsheto.vercel.app
 
 ![image](https://user-images.githubusercontent.com/94540100/221373237-6ccb78d1-8a38-4d9d-a314-7c07c7b6b66f.png)
