@@ -29,21 +29,26 @@ function ChatRow({ id }: Props) {
     setActive(pathname.includes(id));
   }, [pathname]);
 
-  const removeChat = async ()=>{
+  const removeChat = async () => {
     await deleteDoc(doc(db, "users", session?.user?.email!, "chats", id));
     router.replace("/");
   };
-  
+
   return (
     <Link
       href={`/chat/${id}`}
-      className={`chat-row flex justify-center p-3 rounded-md ${active && "bg-gray-700/50"}`}
+      className={`chat-row flex justify-center p-3 rounded-md space-x-3 ${
+        active && "bg-gray-700/50"
+      }`}
     >
       <ChatBubbleBottomCenterIcon className="h-5 w-5" />
       <p className="flex-1 hidden md:inline-flex truncate">
         {messages?.docs[messages?.docs.length - 1]?.data().text || "New Chat"}
       </p>
-      <TrashIcon onClick={removeChat} className="h-5 w-5 text-gray-700 hover:text-red-700" />
+      <TrashIcon
+        onClick={removeChat}
+        className="h-5 w-5 text-gray-700 hover:text-red-700"
+      />
     </Link>
   );
 }

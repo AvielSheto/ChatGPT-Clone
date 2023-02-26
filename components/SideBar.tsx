@@ -7,6 +7,7 @@ import { collection, orderBy, query } from "firebase/firestore";
 import { db } from "../firebase";
 import ChatRow from "./ChatRow";
 import ModelSelection from "./ModelSelection";
+import { ArrowRightOnRectangleIcon } from "@heroicons/react/24/outline";
 
 function SideBar() {
   const { data: session } = useSession();
@@ -42,15 +43,19 @@ function SideBar() {
           ))}
         </div>
       </div>
-
+     
       {session && (
-        <img
-          onClick={() => signOut()}
-          src={session.user?.image!}
-          alt="Profile pic"
-          className="h-12 w-12 rounded-full cursor-pointer mx-auto mb-2
+        <div onClick={() => signOut()} className="flex justify-evenly p-3 rounded-md space-x-3 bg-gray-700/50 hover:bg-gray-700">
+          <div className="flex-1 my-auto">
+            <p className="flex text-white ml-1 ">Logout <ArrowRightOnRectangleIcon className="ml-1 h-7 w-7"/></p>
+          </div>
+          <img
+            src={session.user?.image!}
+            alt="Profile image"
+            className="h-12 w-12 rounded-full cursor-pointer my-auto
           hover:opacity-50"
-        />
+          />
+        </div>
       )}
     </div>
   );

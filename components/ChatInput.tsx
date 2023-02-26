@@ -84,7 +84,7 @@ function ChatInput({ chatId }: Props) {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           type="text"
-          placeholder="Type your message hare..."
+          placeholder="Type your message here..."
         />
         <button
           disabled={!prompt || !session}
