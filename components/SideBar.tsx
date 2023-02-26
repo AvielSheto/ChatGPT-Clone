@@ -50,7 +50,7 @@ function SideBar() {
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
-        <div className="h-full flex flex-col justify-between px-3 py-4 overflow-y-auto bg-[#202123] dark:bg-gray-800">
+        <div className="h-full flex flex-col justify-between px-3 py-4 overflow-y-auto bg-[#202123]">
           <div>
             <a
               href="https://flowbite.com/"
@@ -61,7 +61,7 @@ function SideBar() {
                 className="h-6 mr-3 sm:h-7"
                 alt="Flowbite Logo"
               />
-              <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+              <span className="self-center text-xl font-semibold whitespace-nowrap text-white">
                 ChatGPT
               </span>
             </a>
