@@ -28,7 +28,7 @@ export default async function RootLayout({
             <Login />
           ) : (
             <div className="bg-[#000000e7]">
-              <div>
+              <div className="bg-[#000000e7]">
                 <SideBar />
               </div>
               <div className="sm:ml-64">
