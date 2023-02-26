@@ -5,6 +5,7 @@ import "../styles/globals.css";
 import { authOptions } from "../pages/api/auth/[...nextauth]";
 import Login from "../components/Login";
 import ClientProvider from "../components/ClientProvider";
+import Script from "next/script";
 
 export default async function RootLayout({
   children,
@@ -16,23 +17,29 @@ export default async function RootLayout({
   return (
     <html>
       <head />
+
       <body>
+        <Script
+          src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"
+          strategy="beforeInteractive"
+        />
+
         <SessionProvider session={session}>
           {!session ? (
             <Login />
           ) : (
-            <div className="flex">
-              <div className="bg-[#202123] max-w-xs h-screen overflow-y-auto md:min-w-[20rem]">
+            <div className="bg-[#000000e7]">
+              <div>
                 <SideBar />
               </div>
-              {/* {Sidebar} */}
-
-              {/* {ClientProvider - notification} */}
-              <ClientProvider/>
-              <div className="bg-[#343541] flex-1">{children}</div>
+              <div className="sm:ml-64">
+                <ClientProvider />
+                <div className="bg-[#343541] flex-1">{children}</div>
+              </div>
             </div>
           )}
         </SessionProvider>
+        <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
       </body>
     </html>
   );
