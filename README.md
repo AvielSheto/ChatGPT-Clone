@@ -6,7 +6,6 @@ ChatGPT application with the use of OpenAI API to create a chatbot, and the opti
 - React.Js
 - Typescript.
 - Firebase v9.
-- SWR.
 
 #### Dsign and mobile responsiveness 🎨📱 
 - Tailwind 
