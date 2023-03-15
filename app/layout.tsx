@@ -1,11 +1,12 @@
 import { SessionProvider } from "../components/SessionProvider";
 import SideBar from "../components/SideBar";
 import { getServerSession } from "next-auth";
-import "../styles/globals.css";
 import { authOptions } from "../pages/api/auth/[...nextauth]";
 import Login from "../components/Login";
+import "../styles/globals.css";
 import ClientProvider from "../components/ClientProvider";
 import Script from "next/script";
+
 
 export default async function RootLayout({
   children,
